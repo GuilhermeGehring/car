@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Index</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-</head>
-<body style="margin: 1%">
+@extends('layout')
+
+@section('conteudo')
 	<section class="content-header">
         <h1>Index</h1>
     </section>
@@ -22,12 +17,17 @@
 			<td>{{ $state->name }}</td>
 			<td>{{ $state->acronym }}</td>
 			<td>
-				<a href="{{ route('state.edit', ['id' => $state->id]) }}">Editar</a> |
-				<a href="{{ route('state.destroy', ['id' => $state->id]) }}">Deletar</a>
+				<a class="btn btn-success" href="{{ route('state.edit', ['id' => $state->id]) }}">
+                    <i class="fa fa-pencil-square-o"></i>
+                    Editar
+                </a>
+				<a class="btn btn-danger" href="{{ route('state.destroy', ['id' => $state->id]) }}">
+                    <i class="fa fa-trash-o"></i>
+                    Deletar
+                </a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
-	<a href="{{ route('state.create') }}">Criar novo</a>
-</body>
-</html>
+	<a class="btn btn-primary" href="{{ route('state.create') }}">Criar novo</a>
+@endsection

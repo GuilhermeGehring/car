@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-</head>
-<body style="margin: 1%">
+@extends('layout')
+
+@section('conteudo')
     <section class="content-header">
         <h1>Edit</h1>
     </section>
@@ -45,5 +40,4 @@
             </div>
         </div>
     </section>
-</body>
-</html>
+@endsection

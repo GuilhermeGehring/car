@@ -12,7 +12,7 @@
  */
 
 Route::get('/', function () {
-		return view('welcome');
+		return view('layout');
 	});
 
 Route::group(['prefix'                 => 'estado', 'as'                 => 'state.'], function () {
